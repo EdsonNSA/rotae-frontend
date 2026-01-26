@@ -1,0 +1,249 @@
+
+.ge-main-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.rt-section-title {
+  font-size: 2rem;
+  color: var(--text-main);
+  margin-bottom: 8px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rt-section-title::before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 32px;
+  background-color: var(--primary);
+  border-radius: 4px;
+}
+
+.rt-subtitle {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-top: 0;
+  margin-left: 18px;
+}
+
+.ge-eventos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ge-evento-card {
+  background-color: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+
+.ge-evento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg), 0 0 0 2px var(--primary);
+  border-color: transparent;
+  background-color: var(--bg-card-hover);
+}
+
+.ge-event-date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.02);
+  padding: 24px;
+  min-width: 100px;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ge-date-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(45, 212, 191, 0.1), rgba(45, 212, 191, 0.05));
+  border: 1px solid rgba(45, 212, 191, 0.3);
+  border-radius: 12px;
+  width: 70px;
+  height: 70px;
+  color: var(--primary);
+}
+
+.ge-date-day {
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.ge-date-month {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.ge-event-details {
+  padding: 24px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ge-event-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.ge-category-tag {
+  font-size: 0.75rem;
+  color: var(--primary);
+  background-color: rgba(45, 212, 191, 0.1);
+  padding: 4px 10px;
+  border-radius: var(--border-radius-pill);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.ge-event-details h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.ge-event-info-grid {
+  display: flex;
+  gap: 20px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.ge-event-info-grid p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.ge-event-info-grid svg {
+  color: var(--primary);
+}
+
+.ge-price-tag {
+  color: var(--text-main) !important;
+  font-weight: 600;
+}
+
+.ge-event-description {
+  margin: 8px 0 0 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.ge-event-action {
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.ge-cta-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border-radius: var(--border-radius-pill);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.ge-cta-button:hover {
+  background-color: var(--primary);
+  color: #0f172a;
+  box-shadow: 0 0 15px rgba(45, 212, 191, 0.3);
+}
+
+.ge-loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  color: var(--text-muted);
+}
+
+.ge-loading-spinner {
+  border: 3px solid rgba(255,255,255,0.1);
+  border-top: 3px solid var(--primary);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+@media (max-width: 768px) {
+  .ge-evento-card {
+    flex-direction: column;
+  }
+  
+  .ge-event-date {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 16px 24px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: transparent;
+  }
+  
+  .ge-date-badge {
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    padding: 6px 16px;
+    gap: 8px;
+  }
+  
+  .ge-date-day { font-size: 1.2rem; }
+  
+  .ge-event-action {
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 16px 24px;
+    justify-content: flex-start;
+  }
+  
+  .ge-cta-button {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,256 @@
+/* 
+:root {
+     --azul-escuro: #2C3E50; 
+    --verde-cta: #38C172;
+     --turquesa-icone: #00A3CC;
+     --fundo-principal: #f8f9fa;
+     --sombra-card: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dl-detalhe-lugar-container {
+     padding: 30px 20px;
+     max-width: 1000px;
+     margin: 0 auto;
+     background-color: var(--fundo-principal);
+     min-height: 100vh;
+}
+
+.dl-loading-message, .dl-error-message {
+     text-align: center;
+    padding: 50px;
+     font-size: 1.2em;
+     color: #888;
+}
+
+
+.dl-place-header {
+     margin-bottom: 30px;
+     background-color: white;
+     padding: 20px;
+     border-radius: 12px;
+     box-shadow: var(--sombra-card);
+}
+
+.dl-title-section h1 {
+     color: var(--azul-escuro);
+     font-size: 2.5em;
+    margin-bottom: 5px;
+}
+
+.dl-category-tag {
+    display: inline-block;
+     background-color: var(--turquesa-icone);
+     color: white;
+     padding: 5px 10px;
+    border-radius: 5px;
+     font-weight: bold;
+     font-size: 0.9em;
+     margin-bottom: 15px;
+}
+
+.dl-premium-badge {
+     background-color: gold;
+     color: var(--azul-escuro);
+     padding: 4px 8px;
+     border-radius: 4px;
+     font-size: 0.8em;
+     font-weight: bold;
+     margin-left: 10px;
+}
+
+.dl-photo-gallery {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+     gap: 10px;
+     margin-top: 20px;
+}
+
+.dl-place-photo {
+     width: 100%;
+    height: 150px;
+    object-fit: cover;
+     border-radius: 8px;
+     transition: transform 0.3s;
+}
+
+.dl-place-photo:hover {
+     transform: scale(1.03);
+}
+
+
+.dl-info-section {
+     display: grid;
+    grid-template-columns: 1fr 2fr;
+     gap: 30px;
+     margin-bottom: 40px;
+}
+
+.dl-rating-box, .dl-details-box {
+     background-color: white;
+     padding: 25px;
+     border-radius: 12px;
+     box-shadow: var(--sombra-card);
+}
+
+
+.dl-rating-box h2 {
+     color: var(--azul-escuro);
+     margin-top: 0;
+     font-size: 1.5em;
+     border-bottom: 2px solid var(--verde-cta);
+     padding-bottom: 5px;
+}
+
+.dl-rating-display {
+     text-align: center;
+     padding: 20px 0;
+}
+
+.dl-rating-value {
+     font-size: 3em;
+     font-weight: bold;
+     color: var(--verde-cta);
+     display: block;
+}
+
+.dl-rating-stars {
+     color: gold;
+     font-size: 1.5em;
+     display: block;
+     margin: 5px 0;
+}
+
+.dl-cta-review-button {
+     width: 100%;
+     padding: 10px;
+    background-color: var(--turquesa-icone);
+    color: white;
+    border: none;
+     border-radius: 6px;
+     cursor: pointer;
+    font-weight: bold;
+     transition: background-color 0.3s;
+     margin-top: 15px;
+}
+
+.dl-cta-review-button:hover {
+     background-color: #007bb0;
+}
+
+.dl-details-box p {
+     margin: 10px 0;
+     color: var(--azul-escuro);
+     display: flex;
+     align-items: center;
+     font-weight: 500;
+}
+
+.dl-details-box svg {
+     color: var(--turquesa-icone);
+     margin-right: 8px;
+     font-size: 1.1em;
+}
+
+.dl-cta-contact-button {
+ display: inline-flex;
+ align-items: center;
+ gap: 5px;
+ background-color: var(--verde-cta);
+ color: white;
+ padding: 10px 20px;
+ border-radius: 6px;
+ text-decoration: none;
+ font-weight: bold;
+ margin-top: 20px;
+ transition: background-color 0.3s;
+}
+
+.dl-cta-contact-button:hover {
+ background-color: #2e9f5b;
+}
+
+.dl-mini-map-placeholder {
+height: 150px;
+ background-color: #ddd;
+ border-radius: 6px;
+ margin-top: 20px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: #666;
+ font-style: italic;
+}
+
+
+.dl-description-section {
+ background-color: white;
+ padding: 25px;
+border-radius: 12px;
+ box-shadow: var(--sombra-card);
+ margin-bottom: 40px;
+}
+
+.dl-description-section h2 {
+ color: var(--azul-escuro);
+ border-bottom: 1px solid #eee;
+ padding-bottom: 10px;
+ margin-bottom: 20px;
+ font-size: 1.8em;
+}
+
+.dl-premium-content-box {
+ margin-top: 30px;
+ padding: 20px;
+ background-color: var(--azul-escuro);
+ color: white;
+ border-radius: 8px;
+ border-left: 5px solid var(--verde-cta);
+}
+
+.dl-premium-content-box h3 {
+ margin-top: 0;
+ color: gold;
+ font-size: 1.3em;
+}
+
+
+.dl-reviews-section h2 {
+ color: var(--azul-escuro);
+font-size: 1.8em;
+ margin-bottom: 20px;
+}
+
+.dl-review-card {
+ background-color: white;
+ padding: 15px;
+ border-radius: 8px;
+ border: 1px solid #eee;
+ margin-bottom: 15px;
+}
+
+.dl-review-user {
+ font-weight: bold;
+ color: var(--turquesa-icone);
+ margin-bottom: 5px;
+}
+
+.dl-review-nota .dl-rating-stars {
+ font-size: 1.1em;
+}
+
+.dl-review-comentario {
+ margin-top: 10px;
+ color: #333;
+ font-style: italic;
+}
+
+
+@media (max-width: 768px) {
+ .dl-info-section {
+ grid-template-columns: 1fr;
+ }
+
+ .dl-photo-gallery {
+ grid-template-columns: 1fr;
+ }
+} */
