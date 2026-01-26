@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { FaMountain, FaUtensils, FaUsers, FaCalendarAlt, FaStar, FaRoute, FaTimes, FaMapMarkerAlt, FaInfoCircle, FaLocationArrow } from 'react-icons/fa';
 import './Home.css';
 import imgcarrossel2 from '../../images/carrossel1.jpeg';
@@ -8,7 +8,6 @@ import imgMuseu from '../../images/Instituto_conceição.jpg';
 import imgPanela from '../../images/panela_de_barro.jpg';
 import imgcarrossel1 from '../../images/carrossel2.jpeg';
 import imgcarrossel3 from '../../images/carrossel3.jpg';
-import imgArtesanato from '../../images/artesanato.jpg'; 
 
 const heroImages = [imgcarrossel1, imgcarrossel2, imgcarrossel3];
 

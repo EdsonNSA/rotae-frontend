@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'; 
+import { useState, useEffect } from 'react';
 import imgPanela from '../../images/panela_de_barro.jpg';
 import imgCristo from '../../images/Cristo_Redentor.jpg';
 import imgBambu from '../../images/Parque_do_Bambu.jpg';

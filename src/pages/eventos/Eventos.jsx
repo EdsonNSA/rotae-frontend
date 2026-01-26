@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './Eventos.css'; 
-import { FaCalendarAlt, FaMapMarkerAlt, FaTag, FaTicketAlt } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaTag, FaTicketAlt } from 'react-icons/fa';
 
 const mockEventos = [
   {
