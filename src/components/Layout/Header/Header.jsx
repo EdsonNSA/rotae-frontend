@@ -24,21 +24,17 @@ function Header() {
   return (
     <header className="site-header">
       
-      {/* LOGO (Imagem + Texto) */}
       <div className="logo">
         <Link to="/" onClick={closeMenu}>
-           {/* A Imagem da Logo voltou aqui: */}
            <img src={logoImg} alt="Rotaê Logo" className="header-logo-img" />
            <span className="header-logo-text">Rotaê</span>
         </Link>
       </div>
 
-      {/* Ícone Mobile */}
       <div className="mobile-menu-icon" onClick={toggleMenu}>
           {mobileMenuOpen ? <FaTimes /> : <FaBars />}
       </div>
 
-      {/* Menu Principal */}
       <nav className={`main-nav ${mobileMenuOpen ? 'active' : ''}`}>
         <ul className="nav-list">
           <li><Link to="/" className={`nav-link ${isActive('/')}`} onClick={closeMenu}>Início</Link></li>
@@ -48,7 +44,6 @@ function Header() {
         </ul>
       </nav>
 
-      {/* Botão de Parceiro Restaurado */}
             <div className="header-actions">
                 <a 
                     href="mailto:contato.rotae@gmail.com?subject=Quero ser um parceiro Rotaê" 
