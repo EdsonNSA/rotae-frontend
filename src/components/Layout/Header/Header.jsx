@@ -42,6 +42,15 @@ function Header() {
           <li><Link to="/lugares" className={`nav-link ${isActive('/lugares')}`} onClick={closeMenu}>Lugares</Link></li>
           <li><Link to="/eventos" className={`nav-link ${isActive('/eventos')}`} onClick={closeMenu}>Eventos</Link></li>
         </ul>
+
+        <a 
+            href="mailto:contato.rotae@gmail.com?subject=Quero ser parceiro do Rotaê" 
+            className="create-button mobile-only-btn"
+            onClick={closeMenu}
+        >
+           Torne-se Parceiro
+        </a>
+
       </nav>
 
             <div className="header-actions">
