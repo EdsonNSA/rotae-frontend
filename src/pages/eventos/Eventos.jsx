@@ -56,6 +56,12 @@ function Eventos() {
     }, 300);
   }, []);
 
+  const handleSaibaMais = (e) => {
+    e.preventDefault();
+    alert("Disponível em breve!");
+  };
+
+
   if (loading) {
     return (
         <div className="ge-loading-container">
@@ -98,7 +104,11 @@ function Eventos() {
               </div>
               
               <div className="ge-event-action">
-                  <a href={evento.link} target="_blank" rel="noopener noreferrer" className="ge-cta-button">
+                  <a 
+                    href={evento.link} 
+                    onClick={handleSaibaMais} 
+                    className="ge-cta-button"
+                  >
                       <FaTicketAlt /> SAIBA MAIS
                   </a>
               </div>
