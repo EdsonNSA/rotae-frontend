@@ -57,7 +57,7 @@ const categorias = [
 const atracoesPopulares = [
     { 
         id: 1, 
-        nome: 'Museu Memórias Vivas', 
+        nome: 'instituto Conceição Moura - Museu Memórias Vivas', 
         preco: "R$ 0", 
         avaliacao: 4.8, 
         reviews: 320, 

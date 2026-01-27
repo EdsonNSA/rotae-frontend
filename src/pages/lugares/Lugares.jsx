@@ -43,7 +43,7 @@ const mockLugares = [
   },
   {
     id: '4',
-    nome: 'ICM - Museu Memórias Vivas',
+    nome: 'instituto Conceição Moura - Museu Memórias Vivas',
     categoria: 'Cultural',
     mediaAvaliacao: 4.2,
     totalAvaliacoes: 55,
