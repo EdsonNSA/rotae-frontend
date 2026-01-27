@@ -13,29 +13,40 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px 50px 20px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px; 
-  flex-wrap: wrap; 
 }
 
 .ft-footer-section {
-  flex: 1 1 250px;
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-.ft-footer-section h4 {
+.ft-footer-section h4,
+.ft-about-trigger-btn {
   color: var(--text-main);
+  font-family: 'Inter', sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 24px;
   letter-spacing: 0.02em;
   position: relative;
-  padding-left: 0;
+  padding: 0;
   display: inline-block;
+  align-self: flex-start;
+  background: none;
+  border: none;
+  cursor: default;
 }
 
-.ft-footer-section h4::after {
+.ft-about-trigger-btn {
+  cursor: pointer;
+  text-align: left;
+}
+
+.ft-footer-section h4::after,
+.ft-about-trigger-btn::after {
   content: '';
   position: absolute;
   left: 0;
@@ -44,6 +55,36 @@
   height: 3px;
   background-color: var(--primary);
   border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.ft-about-trigger-btn:hover::after {
+  width: 50px;
+}
+
+.ft-about-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.ft-read-more-btn {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  align-self: flex-start;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.ft-read-more-btn:hover {
+  color: var(--text-main);
 }
 
 .ft-footer-logo-link {
@@ -81,7 +122,7 @@
 .ft-social-links {
   display: flex;
   gap: 12px;
-  margin-top: 20px;
+  margin-top: auto;
 }
 
 .ft-social-links a {
@@ -153,17 +194,228 @@
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+.ft-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+.ft-modal-container {
+  background-color: var(--bg-page);
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 0.3s ease;
+}
+
+.ft-close-modal-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  color: rgb(0, 255, 247);
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 10;
+  padding: 4px 8px;
+  background: transparent;
+}
+
+.ft-close-modal-btn:hover {
+  transform: scale(1.02);
+  background-color: var(--primary);
+  box-shadow: 0 0 20px rgba(45, 212, 191, 0.6); 
+  color: #0f172a;
+}
+
+.ft-modal-content-scroll {
+  padding: 40px;
+  overflow-y: auto;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.ft-about-image-wrapper {
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  background-color: rgba(255,255,255,0.05);
+}
+
+.ft-about-image-wrapper.no-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ft-about-image-wrapper.no-image::after {
+    content: 'Foto da Equipe';
+    color: rgba(255,255,255,0.2);
+    font-weight: 700;
+}
+
+.ft-about-team-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.ft-modal-content-scroll h2 {
+  color: var(--text-main);
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.ft-modal-content-scroll h3 {
+  color: var(--text-main);
+  font-size: 1.4rem;
+  margin: 30px 0 16px;
+}
+
+.highlight-intro {
+  font-size: 1.2rem;
+  color: var(--text-main);
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.ft-modal-content-scroll ul {
+  margin: 24px 0;
+  padding-left: 20px;
+}
+
+.ft-modal-content-scroll li {
+  margin-bottom: 12px;
+}
+
+.ft-modal-content-scroll strong {
+  color: var(--primary);
+}
+
+.final-statement {
+  font-size: 1.1rem;
+  margin-top: 30px;
+}
+
+.accent-text {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.signature {
+  margin-top: 40px;
+  font-weight: 800;
+  color: var(--text-main);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ft-modal-content-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+.ft-modal-content-scroll::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.02);
+}
+.ft-modal-content-scroll::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+
 @media (max-width: 768px) {
   .ft-footer-content {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 40px;
   }
+  
+  .ft-footer-section h4::after,
+  .ft-about-trigger-btn::after {
+    width: 40px;
+  }
 
-  .ft-footer-section {
-    width: 100%;
+  .ft-modal-container {
+      max-height: 95vh;
+      border-radius: 12px;
   }
   
-  .ft-footer-section h4::after {
-    width: 40px; /* Traço maior no mobile */
+  .ft-modal-content-scroll {
+      padding: 24px;
+  }
+
+  .ft-about-image-wrapper {
+      height: 200px;
+  }
+
+  .ft-modal-content-scroll h2 {
+      font-size: 1.5rem;
+  }
+}
+
+.ft-team-section {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ft-team-section h3 {
+  margin-top: 0 !important;
+  margin-bottom: 20px !important;
+  font-size: 1.3rem !important;
+}
+
+.ft-team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.ft-team-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background 0.3s ease;
+}
+
+.ft-team-card:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+  border-color: rgba(45, 212, 191, 0.3);
+}
+
+.ft-team-name {
+  display: block;
+  color: var(--primary);
+  font-size: 1rem;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+.ft-team-role {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+@media (max-width: 480px) {
+  .ft-team-grid {
+    grid-template-columns: 1fr;
   }
 }
