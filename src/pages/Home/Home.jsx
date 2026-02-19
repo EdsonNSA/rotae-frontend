@@ -1,15 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { FaMountain, FaUtensils, FaUsers, FaCalendarAlt, FaStar, FaRoute, FaTimes, FaMapMarkerAlt, FaInfoCircle, FaLocationArrow } from 'react-icons/fa';
 import './Home.css';
-import imgcarrossel2 from '../../images/carrossel1.jpeg';
+import HeroMap from './../HeroMap';
 import imgCristo from '../../images/Cristo_Redentor.jpg';
 import imgBambu from '../../images/Parque_do_Bambu.jpg';
 import imgMuseu from '../../images/Instituto_conceição.jpg';
 import imgPanela from '../../images/panela_de_barro.jpg';
 import imgcarrossel1 from '../../images/carrossel2.jpeg';
 import imgcarrossel3 from '../../images/carrossel3.jpg';
-
-const heroImages = [imgcarrossel1, imgcarrossel2, imgcarrossel3];
 
 const categorias = [
     { 
@@ -103,15 +101,7 @@ const atracoesPopulares = [
 ];
 
 function Home() {
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [selectedItem, setSelectedItem] = useState(null); 
-
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
-        }, 5000); 
-        return () => clearInterval(intervalId);
-    }, []);
 
     const formatPrice = (price) => {
         return price === "R$ 0" ? "Acesso Livre" : price;
@@ -134,20 +124,7 @@ function Home() {
     return (
         <main className="rt-home-container">
             
-            <section className="rt-hero-section">
-                <div className="rt-hero-carousel">
-                    {heroImages.map((imageUrl, index) => (
-                        <div
-                            key={index}
-                            className={`rt-hero-image ${index === currentImageIndex ? 'active' : ''}`}
-                            style={{ backgroundImage: `url(${imageUrl})` }}
-                        />
-                    ))}
-                </div>
-                <div className="rt-hero-content">
-                    <h1 className="rt-main-search-title">Venha conhecer Belo Jardim!</h1>
-                </div>
-            </section>
+            <HeroMap />
 
             <div className="rt-main-content-wrapper">
 
