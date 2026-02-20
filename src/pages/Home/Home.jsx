@@ -8,6 +8,10 @@ import imgMuseu from '../../images/Instituto_conceição.jpg';
 import imgPanela from '../../images/panela_de_barro.jpg';
 import imgcarrossel1 from '../../images/carrossel2.jpeg';
 import imgcarrossel3 from '../../images/carrossel3.jpg';
+import imgRebolo from '../../images/poço_rebolo.jpg';
+import imgMacaco from '../../images/poço_do_macaco.jpg';
+import imgBarragem from '../../images/Barragem_Bitury.jpg';
+import imgMatriz from '../../images/igreja.jpg';
 
 const categorias = [
     { 
@@ -55,7 +59,7 @@ const categorias = [
 const atracoesPopulares = [
     { 
         id: 1, 
-        nome: 'instituto Conceição Moura - Museu Memórias Vivas', 
+        nome: 'Instituto Conceição Moura - Museu Memórias Vivas', 
         preco: "R$ 0", 
         avaliacao: 4.8, 
         reviews: 320, 
@@ -97,6 +101,60 @@ const atracoesPopulares = [
         descricao: "Monumento histórico no alto da serra, oferecendo uma vista panorâmica de Serra do Vento.",
         dica: "A subida é íngreme, recomenda-se ir de carro ou moto. O vento lá em cima é forte!",
         localizacao: 'Serra do Vento'
+    },
+
+    { 
+        id: 19, 
+        nome: 'Poço Rebôlo', 
+        preco: "R$ 0", 
+        avaliacao: 4.7, 
+        reviews: 98, 
+        fotoUrl: imgRebolo, 
+        selo: "Aventura",
+        localizacao: 'Sítio Bitury',
+        descricao: "Um dos tesouros naturais escondidos da região, ideal para quem busca tranquilidade e águas limpas.",
+        dica: "Local preservado. Leve sua água e recolha seu lixo!",
+        coords: [-8.2570, -36.4251]
+    },
+
+    { 
+        id: 3, 
+        nome: 'Poço do Macaco', 
+        preco: "R$ 0", 
+        avaliacao: 4.6, 
+        reviews: 85, 
+        fotoUrl: imgMacaco, 
+        selo: "Trilha",
+        localizacao: 'Serra do Vento',
+        descricao: "Cachoeiras e trilhas no coração da Serra do Vento, perfeito para ecoturismo.",
+        dica: "Ideal para grupos de trilheiros. Use calçados apropriados.",
+        coords: [-8.2303, -36.3417]
+    },
+
+    { 
+        id: 1, 
+        nome: 'Barragem Do Bitury', 
+        preco: "R$ 0", 
+        avaliacao: 4.4, 
+        reviews: 130, 
+        fotoUrl: imgBarragem, 
+        selo: "Paisagem",
+        descricao: "Importante reserva de água e beleza natural da região, ponto clássico de visitação.",
+        dica: "Ótimo para fotos panorâmicas da represa.",
+        coords: [-8.3099, -36.4263]
+    },
+
+    { 
+        id: 4, 
+        nome: 'Igreja Matriz N. Sra. da Conceição', 
+        preco: "R$ 0", 
+        avaliacao: 4.8, 
+        reviews: 420, 
+        fotoUrl: imgMatriz, 
+        selo: "Religião",
+        descricao: "Padroeira da cidade, uma verdadeira joia da arquitetura local no centro histórico.",
+        dica: "A praça em frente foi revitalizada e é ótima para um passeio noturno.",
+        coords: [-8.3355, -36.4235]
     },
 ];
 

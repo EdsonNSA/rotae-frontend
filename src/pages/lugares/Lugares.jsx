@@ -3,55 +3,138 @@ import imgPanela from '../../images/panela_de_barro.jpg';
 import imgCristo from '../../images/Cristo_Redentor.jpg';
 import imgBambu from '../../images/Parque_do_Bambu.jpg';
 import imgMuseu from '../../images/Instituto_conceição.jpg';
+import imgRebolo from '../../images/poço_rebolo.jpg';
+import imgMacaco from '../../images/poço_do_macaco.jpg';
+import imgBarragem from '../../images/Barragem_Bitury.jpg';
+import imgMatriz from '../../images/igreja.jpg';
+import imgArtesanato from '../../images/artesanato.jpg';
+import imgBitury from '../../images/cachoeira.jpg';
 import './Lugares.css'; 
 import { FaStar, FaMapMarkerAlt, FaLocationArrow, FaTimes, FaInfoCircle } from 'react-icons/fa';
 
 const mockLugares = [
   {
+    id: '18',
+    nome: 'Cachoeira do Bitury',
+    categoria: 'Natureza/Aventura',
+    mediaAvaliacao: 4.8,
+    totalAvaliacoes: 215,
+    descricao: 'Uma linda queda d\'água, excelente para banho, piqueniques e lazer em família.',
+    fotoUrl: imgBitury, 
+    localizacao: 'Zona Rural', 
+    curiosidade: 'As águas do Bitury são conhecidas por sua pureza e temperatura refrescante, mesmo no calor do agreste.',
+    dica: 'O acesso final requer uma caminhada curta. Vá com calçados que possam molhar!'
+  },
+  {
+    id: '19',
+    nome: 'Poço Rebôlo',
+    categoria: 'Natureza/Lazer',
+    mediaAvaliacao: 4.7,
+    totalAvaliacoes: 98,
+    descricao: 'Refúgio natural com águas tranquilas, ideal para quem busca paz e contato com a fauna local.',
+    fotoUrl: imgRebolo, 
+    localizacao: 'Sítio Bitury', 
+    curiosidade: 'É um dos locais favoritos dos fotógrafos de natureza da região pela transparência da água.',
+    dica: 'Não há sinal de celular próximo ao poço. Aproveite para se desconectar totalmente!'
+  },
+  {
     id: '1',
+    nome: 'Barragem Do Bitury',
+    categoria: 'Natureza/Lazer',
+    mediaAvaliacao: 4.4,
+    totalAvaliacoes: 130,
+    descricao: 'Grande reservatório de água cercado por vegetação, ideal para contemplação e fotos.',
+    fotoUrl: imgBarragem, 
+    localizacao: 'Belo Jardim', 
+    curiosidade: 'Além de ponto turístico, é uma das principais fontes de abastecimento da região.',
+    dica: 'O paredão da barragem oferece um ângulo incrível para fotos durante o "golden hour".'
+  },
+  {
+    id: '3',
+    nome: 'Poço do Macaco',
+    categoria: 'Natureza/Trilha',
+    mediaAvaliacao: 4.6,
+    totalAvaliacoes: 85,
+    descricao: 'Local encravado na serra com pequenas quedas d\'água e trilhas moderadas.',
+    fotoUrl: imgMacaco, 
+    localizacao: 'Serra do Vento', 
+    curiosidade: 'O nome vem da presença constante de saguis que habitam as árvores ao redor das quedas.',
+    dica: 'Contrate um guia local se for sua primeira vez fazendo as trilhas mais fechadas.'
+  },
+
+  {
+    id: '17',
     nome: 'Cristo Redentor',
     categoria: 'Histórico/Religioso',
     mediaAvaliacao: 4.7,
     totalAvaliacoes: 154,
-    descricao: 'Importante marco cultural e religioso da cidade, oferecendo uma vista panorâmica.',
+    descricao: 'Marco cultural no alto da serra, oferecendo uma vista panorâmica de 360 graus.',
     fotoUrl: imgCristo, 
     localizacao: 'Serra do Vento', 
-    curiosidade: 'Do alto da serra, é possível ter uma visão de 360 graus de toda a cidade e arredores.',
-    dica: 'O pôr do sol visto daqui é considerado um dos mais bonitos do estado. Leve um casaco, venta bastante!'
+    curiosidade: 'É o ponto mais alto visitável próximo ao centro, permitindo ver cidades vizinhas em dias limpos.',
+    dica: 'Leve um agasalho. Por estar em altitude elevada, a temperatura cai bastante ao entardecer!'
+  },
+  {
+    id: '4',
+    nome: 'Igreja Matriz N. Sra. da Conceição',
+    categoria: 'Religioso/Arquitetura',
+    mediaAvaliacao: 4.8,
+    totalAvaliacoes: 420,
+    descricao: 'A imponente igreja matriz dedicada à padroeira da cidade, marco do centro histórico.',
+    fotoUrl: imgMatriz, 
+    localizacao: 'Centro', 
+    curiosidade: 'A igreja é o ponto central das festividades de dezembro, as mais tradicionais da cidade.',
+    dica: 'Visite o interior para apreciar os detalhes da arquitetura neoclássica.'
+  },
+  {
+    id: '6',
+    nome: 'Instituto Conceição Moura - Museu Memórias Vivas',
+    categoria: 'Cultural/Educativo',
+    mediaAvaliacao: 4.9,
+    totalAvaliacoes: 320,
+    descricao: 'Centro de cultura e memória que preserva o legado industrial e social de Belo Jardim.',
+    fotoUrl: imgMuseu,
+    localizacao: 'Centro',
+    curiosidade: 'O prédio é uma peça histórica por si só, tendo sido parte fundamental da evolução urbana da cidade.',
+    dica: 'Verifique a agenda no site oficial; o instituto costuma ter oficinas e recitais de música.'
+  },
+  {
+    id: '14',
+    nome: 'Artesanato Tareco e Mariola',
+    categoria: 'Cultura/Compras',
+    mediaAvaliacao: 4.8,
+    totalAvaliacoes: 410,
+    descricao: 'Ponto de parada obrigatório para adquirir artesanato em barro e os doces típicos da região.',
+    fotoUrl: imgArtesanato,
+    localizacao: 'Margens da BR-232',
+    curiosidade: 'Belo Jardim é nacionalmente famosa pela produção desses doces tradicionais.',
+    dica: 'Ideal para comprar lembrancinhas feitas por artesãos locais antes de pegar a estrada.'
+  },
+
+  {
+    id: '13',
+    nome: 'Parque do Bambu',
+    categoria: 'Natureza/Lazer',
+    mediaAvaliacao: 4.9,
+    totalAvaliacoes: 500,
+    descricao: 'Área verde urbana com excelente infraestrutura para lazer, caminhadas e esportes.',
+    fotoUrl: imgBambu,
+    localizacao: 'Bairro São Pedro',
+    curiosidade: 'O bambuzal que dá nome ao parque cria um túnel natural que é um dos pontos mais fotografados.',
+    dica: 'Final de tarde é o melhor horário para aproveitar a brisa e as quadras poliesportivas.'
   },
   {
     id: '2',
     nome: 'Restaurante Panela de Barro',
     categoria: 'Gastronomia',
     mediaAvaliacao: 4.5,
-    totalAvaliacoes: 89,
-    descricao: 'Comida regional nordestina, servida em um ambiente familiar e acolhedor.',
+    totalAvaliacoes: 150,
+    descricao: 'Referência em culinária regional, famoso pelo ambiente acolhedor e música ao vivo.',
     fotoUrl: imgPanela, 
-    curiosidade: 'O tempero utilizado na galinha de capoeira é uma receita de família guardada há 3 gerações.',
-    dica: 'Aos domingos, chegue antes das 12h para evitar filas e pegar uma mesa na varanda.'
-  },
-  {
-    id: '3',
-    nome: 'Parque do Bambu',
-    categoria: 'Natureza/Lazer',
-    mediaAvaliacao: 4.8,
-    totalAvaliacoes: 210,
-    descricao: 'Área de lazer com playground infantil, quadras e ótimo para caminhadas.',
-    fotoUrl: imgBambu,
-    curiosidade: 'O parque foi construído em uma área de preservação e conta com diversas espécies nativas da caatinga.',
-    dica: 'Perfeito para piqueniques no final da tarde. O parque é pet-friendly!'
-  },
-  {
-    id: '4',
-    nome: 'instituto Conceição Moura - Museu Memórias Vivas',
-    categoria: 'Cultural',
-    mediaAvaliacao: 4.2,
-    totalAvaliacoes: 55,
-    descricao: 'Coleção de peças que contam a história de Belo Jardim e sua evolução industrial.',
-    fotoUrl: imgMuseu,
-    curiosidade: 'O prédio do museu antigamente abrigava a primeira grande fábrica da cidade.',
-    dica: 'Agende uma visita guiada para conhecer os detalhes de cada peça do acervo.'
-  },
+    localizacao: 'Centro',
+    curiosidade: 'O prato "Galinha de Capoeira" é o mais pedido e segue uma receita passada por gerações.',
+    dica: 'Aos domingos o movimento é intenso. Chegar cedo garante os melhores lugares perto do palco.'
+  }
 ];
 
 function Lugares() {

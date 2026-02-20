@@ -4,6 +4,16 @@ import { FaMapMarkerAlt, FaTag, FaTicketAlt } from 'react-icons/fa';
 
 const mockEventos = [
   {
+    id: 5,
+    nome: 'Festa das Marocas',
+    data: '05/Jul',
+    local: 'Centro da Cidade (Pátio de Eventos)',
+    categoria: 'Tradicional',
+    descricao: 'A maior e mais tradicional festa de Belo Jardim. Cultura, música nordestina e o famoso desfile do carro de boi, celebrando nossas raízes.',
+    preco: 'Grátis',
+    link: '#',
+  },
+  {
     id: 1,
     nome: 'Feira de Artesanato e Cultura Local',
     data: '15/Nov',
