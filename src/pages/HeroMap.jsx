@@ -15,7 +15,7 @@ let DefaultIcon = L.icon({
 L.Marker.prototype.options.icon = DefaultIcon;
 
 const pontosTuristicos = [
-  { id: 1, nome: "Barragem Tabocas", coords: [-8.3099, -36.4263], imagem: require("../images/Barragem_Bitury.jpg"), desc: "Importante reserva de água e beleza natural da região." },
+  { id: 1, nome: "Barragem do Bitury", coords: [-8.3099, -36.4263], imagem: require("../images/Barragem_Bitury.jpg"), desc: "Importante reserva de água e beleza natural da região." },
   { id: 2, nome: "Espalhadeira de Taboca do Monte", coords: [-8.2511, -36.3927], imagem: require("../images/Espalhadeira.jpg"), desc: "Lugar perfeito para contato com a natureza e lazer em família." },
   { id: 3, nome: "Poço do Macaco", coords: [-8.2303, -36.3417], imagem: require("../images/poço_do_macaco.jpg"), desc: "Cachoeiras e trilhas no coração da Serra do Vento." },
   { id: 17, nome: "Cristo Redentor", coords: [-8.214376406805536, -36.37428653946218], imagem: require("../images/Cristo_Redentor.jpg"), desc: "Vista panorâmica incrível da cidade e cartão postal." },
